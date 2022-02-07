@@ -17,7 +17,7 @@ namespace JWTAuthAuthentication.Services
             var tokenHandler = new JwtSecurityTokenHandler();
             //Chave da classe Configuration. O Token Handler espera um Array de Bytes, por isso é necessário converter
             var key = Encoding.ASCII.GetBytes(Configuration.JwtKey);
-            //
+            //Convertendo JWTKey em byte
             var claims = user.GetClaims();
             var tokenDescriptor = new SecurityTokenDescriptor
             {

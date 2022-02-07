@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 namespace JWTAuthAuthentication.Controllers
 {
     [Authorize]
-    [Route("api/[controller]")]
+    [Route("api/auth")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class AuthController : ControllerBase
     {
         
         [Authorize(Roles = "admin")]
@@ -39,7 +39,7 @@ namespace JWTAuthAuthentication.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPost("v1/register/")]
+        [HttpPost("v1/register")]
         public async Task<IActionResult> Register([FromBody] RegisterViewModel model,
                                               [FromServices] DataContext context)
         {
@@ -72,7 +72,7 @@ namespace JWTAuthAuthentication.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPost("v1/accounts/login")]
+        [HttpPost("v1/login")]
         public async Task<IActionResult> Login(
        [FromBody] LoginViewModel model,
        [FromServices] DataContext context,

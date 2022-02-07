@@ -4,13 +4,13 @@ namespace JWTAuthAuthentication.Models
 {
     public class LoginViewModel
     {
-        [Required(ErrorMessage = "O nome é obrigatório")]
+        [Required(ErrorMessage = "Name is required")]
         public string Name { get; set; }
 
-        [Required(ErrorMessage = "O email é obrigatório")]
-        [EmailAddress(ErrorMessage = "O email deve ser válido")]
+        [Required(ErrorMessage = "Email is required")]
+        [EmailAddress(ErrorMessage = "Email must be valid")]
         public string Email { get; set; }
-        [Required(ErrorMessage = "Informe a senha")]
+        [Required(ErrorMessage = "Password is required")]
         public string Password { get; set; }
     }
 }

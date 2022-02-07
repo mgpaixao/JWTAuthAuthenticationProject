@@ -49,7 +49,9 @@ namespace JWTAuthAuthentication
                         ValidateIssuer = false
                     };                    
                 });
+            //Injeção de Dependencia
             services.AddTransient<TokenService>();
+
             services.AddControllers();
 
             //Configuração do Swagger para adicionar o Bearer Token na auth
@@ -96,7 +98,7 @@ namespace JWTAuthAuthentication
 
             app.UseRouting();
 
-            ////JWTConfig
+            ////JWTConfig - Adicionar sempre Authentication antes de Authorization
             app.UseAuthentication();
             app.UseAuthorization();
 
