@@ -32,7 +32,6 @@ namespace JWTAuthAuthentication
         {
             //DBContext
             services.AddDbContext<DataContext>();
-
             //JWTConfig
             var key = Encoding.ASCII.GetBytes(JwtKey);
             services.AddAuthentication(x =>
@@ -93,15 +92,11 @@ namespace JWTAuthAuthentication
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "JWTAuthAuthentication v1"));
                 
             }
-
             app.UseHttpsRedirection();
-
             app.UseRouting();
-
             ////JWTConfig - Adicionar sempre Authentication antes de Authorization
             app.UseAuthentication();
             app.UseAuthorization();
-
 
             app.UseEndpoints(endpoints =>
             {
