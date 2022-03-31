@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Modulo 3",
+    "\\Modulo 3\\Controllers"
   ],
-  "SelectedNode": "\\JWTAuthAuthentication3.sln",
+  "SelectedNode": "\\Modulo 3\\Controllers\\UsersController.cs",
   "PreviewInSolutionExplorer": false
 }
